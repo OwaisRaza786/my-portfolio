@@ -1,0 +1,429 @@
+/* Project Card CSS */
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.project-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+/* Visual Preview Container */
+.project-visual-wrapper {
+  width: 100%;
+  height: 220px;
+  background: rgba(12, 14, 22, 0.9);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.project-visual-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  background: rgba(18, 21, 35, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  padding: 14px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover .project-visual-inner {
+  transform: scale(1.03);
+}
+
+/* Project Card Details Body */
+.project-card-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.project-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.project-number {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.project-arrow-icon {
+  color: var(--text-muted);
+  transition: all var(--transition-normal);
+  transform: translateX(-4px);
+  opacity: 0.6;
+}
+
+.project-card:hover .project-arrow-icon {
+  color: var(--accent-primary);
+  transform: translateX(0) translateY(-2px);
+  opacity: 1;
+}
+
+.project-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.project-description {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Tech Tags */
+.project-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Features List */
+.project-features-list {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84375rem;
+  color: var(--text-secondary);
+}
+
+.feature-icon {
+  color: var(--accent-emerald);
+  flex-shrink: 0;
+}
+
+/* Card Buttons Action Footer */
+.project-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.project-card-actions .btn-primary,
+.project-card-actions .btn-secondary {
+  flex: 1;
+  padding: 9px 12px;
+  font-size: 0.84375rem;
+}
+
+/* Custom UI Previews Styling for Each Category */
+/* Common mini window header */
+.preview-window-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 10px;
+}
+
+.preview-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.preview-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.preview-bar-title {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+/* Dashboard UI Preview */
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.dash-card-mini {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dash-val {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dash-lbl {
+  font-size: 0.625rem;
+  color: var(--text-muted);
+}
+
+.dash-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 55px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.bar-col {
+  flex: 1;
+  background: var(--gradient-accent);
+  border-radius: 3px 3px 0 0;
+  opacity: 0.85;
+}
+
+/* Weather UI Preview */
+.weather-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.weather-search-bar {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.temp-big {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #38bdf8;
+}
+
+.weather-forecast-row {
+  display: flex;
+  gap: 6px;
+}
+
+.forecast-pill {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.625rem;
+  color: var(--text-secondary);
+}
+
+/* Expense UI Preview */
+.expense-balance-box {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  margin-bottom: 10px;
+}
+
+.expense-amount {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #34d399;
+}
+
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+}
+
+/* Cart UI Preview */
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cart-item-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-btn-mini {
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  font-size: 0.5625rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-top: 4px;
+  cursor: default;
+}
+
+/* Notes UI Preview */
+.notes-grid-preview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.note-card-mini {
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 0.6875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.note-indigo { background: rgba(99, 102, 241, 0.15); }
+.note-emerald { background: rgba(16, 185, 129, 0.15); }
+.note-violet { background: rgba(139, 92, 246, 0.15); }
+.note-amber { background: rgba(245, 158, 11, 0.15); }
+
+/* Calculator UI Preview */
+.calc-display {
+  background: #08090d;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  text-align: right;
+  color: #38bdf8;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 8px;
+}
+
+.calc-keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.calc-key {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  font-size: 0.6875rem;
+  text-align: center;
+  padding: 5px 0;
+  color: var(--text-primary);
+}
+.calc-key.operator {
+  background: rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+}
+
+/* Todo UI Preview */
+.todo-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  font-size: 0.6875rem;
+}
+
+.todo-check {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-text.done {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
