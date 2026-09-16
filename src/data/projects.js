@@ -113,16 +113,15 @@ export const projects = [
 ];
 
 export const skillsList = [
-  { name: "HTML5", category: "Core Syntax & Markup", icon: "html" },
-  { name: "CSS3", category: "Styling & Animations", icon: "css" },
-  { name: "JavaScript", category: "ES6+ & Async Logic", icon: "javascript" },
-  { name: "React", category: "UI Library & Components", icon: "react" },
+  { name: "HTML5", category: "Core Markup", icon: "html" },
+  { name: "CSS3", category: "Styling & Layouts", icon: "css" },
   { name: "Bootstrap", category: "UI Framework", icon: "bootstrap" },
-  { name: "Git", category: "Version Control", icon: "git" },
-  { name: "GitHub", category: "Code Hosting & Collaboration", icon: "github" },
-  { name: "REST API", category: "Data Fetching & Integration", icon: "api" },
-  { name: "LocalStorage", category: "Client-side Persistence", icon: "storage" },
-  { name: "Responsive Design", category: "Mobile First & Layouts", icon: "responsive" }
+  { name: "JavaScript", category: "Logic & ES6+", icon: "javascript" },
+  { name: "jQuery", category: "DOM Manipulation", icon: "jquery" },
+  { name: "PHP", category: "Backend Scripting", icon: "php" },
+  { name: "React", category: "UI Library", icon: "react" },
+  { name: "Node JS", category: "Runtime Environment", icon: "node" },
+  { name: "MySQLi", category: "Database", icon: "mysqli" }
 ];
 
 export const servicesList = [

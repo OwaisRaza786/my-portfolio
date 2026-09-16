@@ -2,30 +2,28 @@ import React from 'react';
 import { 
   FileCode, 
   Palette, 
-  Zap, 
-  Atom, 
   LayoutGrid, 
-  GitBranch, 
-  Globe, 
-  Database, 
-  MonitorSmartphone 
+  Zap, 
+  Layers, 
+  Server, 
+  Atom, 
+  Cpu, 
+  Database 
 } from 'lucide-react';
-import { GithubIcon } from './Icons';
 import { skillsList } from '../data/projects';
 import './Skills.css';
 
 const getSkillIcon = (iconName) => {
   switch (iconName) {
-    case 'html': return <FileCode size={24} />;
-    case 'css': return <Palette size={24} />;
-    case 'javascript': return <Zap size={24} />;
-    case 'react': return <Atom size={24} />;
+    case 'html5': return <FileCode size={24} />;
+    case 'css3': return <Palette size={24} />;
     case 'bootstrap': return <LayoutGrid size={24} />;
-    case 'git': return <GitBranch size={24} />;
-    case 'github': return <GithubIcon size={24} />;
-    case 'api': return <Globe size={24} />;
-    case 'storage': return <Database size={24} />;
-    case 'responsive': return <MonitorSmartphone size={24} />;
+    case 'javascript': return <Zap size={24} />;
+    case 'jquery': return <Layers size={24} />;
+    case 'php': return <Server size={24} />;
+    case 'react': return <Atom size={24} />;
+    case 'node': return <Cpu size={24} />;
+    case 'mysqli': return <Database size={24} />;
     default: return <Zap size={24} />;
   }
 };
@@ -39,7 +37,7 @@ export default function Skills() {
           <span className="section-badge">TECH STACK</span>
           <h2 className="section-title">My Skills</h2>
           <p className="section-subtitle">
-            Core technologies and tools I utilize to craft modern frontend web applications.
+            Core technologies and tools I utilize to craft modern web applications.
           </p>
         </div>
 
