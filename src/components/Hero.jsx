@@ -1,8 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowRight, Code2, Sparkles, Terminal, CheckCircle2 } from 'lucide-react';
 import './Hero.css';
 
+const roles = [
+  'Web Developer',
+  'Frontend Developer',
+  'Backend Developer'
+];
+
 export default function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    let timer;
+
+    if (!isDeleting && displayedText !== currentRole) {
+      // 1. Typing character by character (55ms)
+      timer = setTimeout(() => {
+        setDisplayedText(currentRole.substring(0, displayedText.length + 1));
+      }, 55);
+    } else if (!isDeleting && displayedText === currentRole) {
+      // 2. Complete role displayed -> pause for 1200ms
+      timer = setTimeout(() => {
+        setIsDeleting(true);
+      }, 1200);
+    } else if (isDeleting && displayedText !== '') {
+      // 3. Deleting character by character (35ms)
+      timer = setTimeout(() => {
+        setDisplayedText(currentRole.substring(0, displayedText.length - 1));
+      }, 35);
+    } else if (isDeleting && displayedText === '') {
+      // 4. Role completely deleted -> pause 300ms before typing next role
+      timer = setTimeout(() => {
+        setIsDeleting(false);
+        setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      }, 300);
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayedText, isDeleting, roleIndex]);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -31,7 +71,14 @@ export default function Hero() {
 
             <span className="hero-greeting">HELLO, I'M</span>
             <h1 className="hero-name">Owais</h1>
-            <h2 className="hero-role">Frontend Developer</h2>
+            
+            {/* Developer Typewriter Heading */}
+            <div className="hero-role-wrapper">
+              <h2 className="hero-role">
+                <span className="hero-role-text">{displayedText}</span>
+                <span className="typewriter-cursor">|</span>
+              </h2>
+            </div>
             
             <p className="hero-description">
               Building clean, responsive and interactive web experiences with modern frontend technologies.

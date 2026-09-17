@@ -13,8 +13,8 @@ export const projects = [
       "Responsive UI",
       "Login functionality"
     ],
-    liveDemoUrl: "LIVE_DEMO_URL",
-    githubUrl: "GITHUB_URL",
+    liveDemoUrl: "https://admin-dashboard-black-eta-50.vercel.app/",
+    githubUrl: "https://github.com/OwaisRaza786/adminDashboard",
     category: "dashboard"
   },
   {
@@ -29,8 +29,8 @@ export const projects = [
       "API integration",
       "Responsive design"
     ],
-    liveDemoUrl: "LIVE_DEMO_URL",
-    githubUrl: "GITHUB_URL",
+    liveDemoUrl: "https://weather-app-kappa-teal.vercel.app/",
+    githubUrl: "https://github.com/OwaisRaza786/weather-app",
     category: "weather"
   },
   {

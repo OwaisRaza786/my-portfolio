@@ -1,25 +1,27 @@
-/* Footer CSS */
+/* Footer CSS - Owais Portfolio */
 .site-footer {
   border-top: 1px solid var(--border-subtle);
   background: var(--bg-secondary);
-  padding: 60px 0 30px 0;
+  padding: 80px 0 30px 0;
   position: relative;
   z-index: 10;
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  text-align: center;
+.footer-container {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
-.footer-brand {
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr 1.1fr;
+  gap: 40px;
+  padding-bottom: 56px;
+}
+
+.footer-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 6px;
 }
 
 .footer-logo {
@@ -30,43 +32,180 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-bottom: 14px;
 }
 
-.footer-role {
+.logo-bracket {
+  color: var(--accent-primary);
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.footer-intro-text {
   font-size: 0.9375rem;
-  color: var(--text-muted);
-  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 320px;
 }
 
-.footer-links {
+.footer-social-row {
   display: flex;
   align-items: center;
-  gap: 24px;
-  list-style: none;
+  gap: 12px;
 }
 
-.footer-link {
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.footer-social-btn:hover {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.footer-col-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav-link {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.9375rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-nav-link:hover {
+  color: var(--accent-primary);
+  transform: translateX(4px);
+}
+
+/* Compact Tech Badges */
+.footer-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.footer-work-desc {
+  font-size: 0.84375rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.footer-inline-link {
+  color: var(--accent-primary);
+  text-decoration: none;
+  font-size: 0.84375rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   transition: color var(--transition-fast);
 }
 
-.footer-link:hover {
-  color: var(--accent-primary);
+.footer-inline-link:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
 }
 
-.footer-divider-dot {
-  color: var(--text-muted);
-  font-size: 0.75rem;
+/* Contact / CTA Column */
+.footer-cta-heading {
+  font-size: 0.96875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
 }
 
-.footer-copyright {
-  margin-top: 20px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  width: 100%;
-  text-align: center;
+.footer-cta-sub {
   font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-size: 0.84375rem;
   color: var(--text-muted);
+  margin: 0;
+}
+
+.footer-tech-stack {
+  font-size: 0.84375rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 60px 0 24px 0;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 40px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
 }

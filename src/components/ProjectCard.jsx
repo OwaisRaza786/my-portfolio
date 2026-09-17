@@ -263,7 +263,7 @@ export default function ProjectCard({ project }) {
         {/* Buttons Action Group */}
         <div className="project-card-actions">
           <a
-            href={project.liveDemoUrl === 'LIVE_DEMO_URL' ? '#projects' : project.liveDemoUrl}
+            href={project.liveDemoUrl === 'LIVE_DEMO_URL' ? 'https://admin-dashboard-black-eta-50.vercel.app/' : project.liveDemoUrl}
             target={project.liveDemoUrl === 'LIVE_DEMO_URL' ? '_self' : '_blank'}
             rel="noopener noreferrer"
             className="btn-primary"
@@ -273,7 +273,7 @@ export default function ProjectCard({ project }) {
           </a>
 
           <a
-            href={project.githubUrl === 'GITHUB_URL' ? '#projects' : project.githubUrl}
+            href={project.githubUrl === 'GITHUB_URL' ? 'https://github.com/OwaisRaza786/adminDashboard' : project.githubUrl}
             target={project.githubUrl === 'GITHUB_URL' ? '_self' : '_blank'}
             rel="noopener noreferrer"
             className="btn-secondary"
