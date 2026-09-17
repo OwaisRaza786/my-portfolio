@@ -2,28 +2,34 @@ import React from 'react';
 import { 
   FileCode, 
   Palette, 
-  LayoutGrid, 
   Zap, 
-  Layers, 
+  Layers,
+  LayoutGrid, 
   Server, 
+  Database,
   Atom, 
   Cpu, 
-  Database 
+  Code2,
+  HardDrive
 } from 'lucide-react';
 import { skillsList } from '../data/projects';
 import './Skills.css';
 
 const getSkillIcon = (iconName) => {
   switch (iconName) {
-    case 'html5': return <FileCode size={24} />;
-    case 'css3': return <Palette size={24} />;
-    case 'bootstrap': return <LayoutGrid size={24} />;
+    case 'html5':
+    case 'html': return <FileCode size={24} />;
+    case 'css3':
+    case 'css': return <Palette size={24} />;
     case 'javascript': return <Zap size={24} />;
     case 'jquery': return <Layers size={24} />;
+    case 'bootstrap': return <LayoutGrid size={24} />;
     case 'php': return <Server size={24} />;
+    case 'mysqli': return <Database size={24} />;
     case 'react': return <Atom size={24} />;
     case 'node': return <Cpu size={24} />;
-    case 'mysqli': return <Database size={24} />;
+    case 'express': return <Code2 size={24} />;
+    case 'mongodb': return <HardDrive size={24} />;
     default: return <Zap size={24} />;
   }
 };

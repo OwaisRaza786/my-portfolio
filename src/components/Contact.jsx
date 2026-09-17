@@ -55,7 +55,7 @@ export default function Contact() {
 
             <div className="contact-details-list">
               <a 
-                href={socialLinks.email === 'YOUR_EMAIL' ? '#contact' : `mailto:${socialLinks.email}`}
+                href={`mailto:${socialLinks.email}`}
                 className="contact-item"
               >
                 <div className="contact-item-icon">
@@ -68,8 +68,8 @@ export default function Contact() {
               </a>
 
               <a 
-                href={socialLinks.github === 'YOUR_GITHUB_URL' ? '#contact' : socialLinks.github}
-                target={socialLinks.github === 'YOUR_GITHUB_URL' ? '_self' : '_blank'}
+                href={socialLinks.github}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="contact-item"
               >
@@ -78,13 +78,13 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="contact-item-label">GitHub</span>
-                  <span className="contact-item-value">{socialLinks.github}</span>
+                  <span className="contact-item-value">OwaisRaza786</span>
                 </div>
               </a>
 
               <a 
-                href={socialLinks.linkedin === 'YOUR_LINKEDIN_URL' ? '#contact' : socialLinks.linkedin}
-                target={socialLinks.linkedin === 'YOUR_LINKEDIN_URL' ? '_self' : '_blank'}
+                href={socialLinks.linkedin}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="contact-item"
               >
@@ -93,7 +93,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="contact-item-label">LinkedIn</span>
-                  <span className="contact-item-value">{socialLinks.linkedin}</span>
+                  <span className="contact-item-value">OwaisRaza786</span>
                 </div>
               </a>
             </div>
@@ -123,7 +123,7 @@ export default function Contact() {
                   id="email"
                   name="email"
                   className="form-input"
-                  placeholder="your.email@example.com"
+                  placeholder="owaisraza844570@gmail.com"
                   value={formData.email}
                   onChange={handleChange}
                   required

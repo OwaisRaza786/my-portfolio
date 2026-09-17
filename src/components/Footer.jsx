@@ -28,12 +28,17 @@ export default function Footer() {
   ];
 
   const technologies = [
-    'HTML',
-    'CSS',
+    'HTML5',
+    'CSS3',
     'JavaScript',
-    'Bootstrap',
+    'jQuery',
+    'Bootstrap 5',
+    'PHP',
+    'MySQLi',
     'React',
-    'Node.js'
+    'Node.js',
+    'Express.js',
+    'MongoDB'
   ];
 
   return (
@@ -61,8 +66,8 @@ export default function Footer() {
             {/* Social Links */}
             <div className="footer-social-row">
               <a 
-                href={socialLinks.github === 'YOUR_GITHUB_URL' ? '#contact' : socialLinks.github}
-                target={socialLinks.github === 'YOUR_GITHUB_URL' ? '_self' : '_blank'}
+                href={socialLinks.github}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-btn"
                 aria-label="GitHub Profile"
@@ -70,8 +75,8 @@ export default function Footer() {
                 <GithubIcon size={18} />
               </a>
               <a 
-                href={socialLinks.linkedin === 'YOUR_LINKEDIN_URL' ? '#contact' : socialLinks.linkedin}
-                target={socialLinks.linkedin === 'YOUR_LINKEDIN_URL' ? '_self' : '_blank'}
+                href={socialLinks.linkedin}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-btn"
                 aria-label="LinkedIn Profile"
@@ -79,7 +84,7 @@ export default function Footer() {
                 <LinkedinIcon size={18} />
               </a>
               <a 
-                href={socialLinks.email === 'YOUR_EMAIL' ? '#contact' : `mailto:${socialLinks.email}`}
+                href={`mailto:${socialLinks.email}`}
                 className="footer-social-btn"
                 aria-label="Send Email"
               >

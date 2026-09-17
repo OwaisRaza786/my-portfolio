@@ -46,7 +46,7 @@ export const projects = [
       "Persistent data"
     ],
     liveDemoUrl: "LIVE_DEMO_URL",
-    githubUrl: "GITHUB_URL",
+    githubUrl: "https://github.com/OwaisRaza786",
     category: "expense"
   },
   {
@@ -62,7 +62,7 @@ export const projects = [
       "Total calculation"
     ],
     liveDemoUrl: "LIVE_DEMO_URL",
-    githubUrl: "GITHUB_URL",
+    githubUrl: "https://github.com/OwaisRaza786",
     category: "cart"
   },
   {
@@ -77,7 +77,7 @@ export const projects = [
       "LocalStorage persistence"
     ],
     liveDemoUrl: "LIVE_DEMO_URL",
-    githubUrl: "GITHUB_URL",
+    githubUrl: "https://github.com/OwaisRaza786",
     category: "notes"
   },
   {
@@ -92,7 +92,7 @@ export const projects = [
       "Modern UI layout"
     ],
     liveDemoUrl: "LIVE_DEMO_URL",
-    githubUrl: "GITHUB_URL",
+    githubUrl: "https://github.com/OwaisRaza786",
     category: "calculator"
   },
   {
@@ -107,21 +107,23 @@ export const projects = [
       "Persistent storage"
     ],
     liveDemoUrl: "LIVE_DEMO_URL",
-    githubUrl: "GITHUB_URL",
+    githubUrl: "https://github.com/OwaisRaza786",
     category: "todo"
   }
 ];
 
 export const skillsList = [
-  { name: "HTML5", category: "Core Markup", icon: "html" },
-  { name: "CSS3", category: "Styling & Layouts", icon: "css" },
-  { name: "Bootstrap", category: "UI Framework", icon: "bootstrap" },
+  { name: "HTML5", category: "Core Markup", icon: "html5" },
+  { name: "CSS3", category: "Styling & Layouts", icon: "css3" },
   { name: "JavaScript", category: "Logic & ES6+", icon: "javascript" },
   { name: "jQuery", category: "DOM Manipulation", icon: "jquery" },
+  { name: "Bootstrap 5", category: "UI Framework", icon: "bootstrap" },
   { name: "PHP", category: "Backend Scripting", icon: "php" },
+  { name: "MySQLi", category: "Relational Database", icon: "mysqli" },
   { name: "React", category: "UI Library", icon: "react" },
-  { name: "Node JS", category: "Runtime Environment", icon: "node" },
-  { name: "MySQLi", category: "Database", icon: "mysqli" }
+  { name: "Node.js", category: "Runtime Environment", icon: "node" },
+  { name: "Express.js", category: "Web Framework", icon: "express" },
+  { name: "MongoDB", category: "NoSQL Database", icon: "mongodb" }
 ];
 
 export const servicesList = [
@@ -143,7 +145,7 @@ export const servicesList = [
 ];
 
 export const socialLinks = {
-  email: "YOUR_EMAIL",
-  github: "YOUR_GITHUB_URL",
-  linkedin: "YOUR_LINKEDIN_URL"
+  email: "owaisraza844570@gmail.com",
+  github: "https://github.com/OwaisRaza786",
+  linkedin: "https://www.linkedin.com/in/OwaisRaza786"
 };
