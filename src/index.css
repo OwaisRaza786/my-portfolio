@@ -172,10 +172,33 @@ body {
 
 @media (max-width: 768px) {
   .section-container {
-    padding: 0px 18px;
+    padding: 70px 18px;
   }
 }
+/* 425px Mobile */
+@media (max-width: 425px) {
 
+  .section-container {
+    padding: 0 18px;
+  }
+
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .services-section {
+    padding: 60px 0;
+  }
+
+  .projects-section {
+    padding: 60px 0;
+  }
+
+  .contact-section {
+    padding: 60px 0;
+  }
+
+}
 /* Typography & Section Titles */
 .section-header {
   margin-bottom: 56px;
